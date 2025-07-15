@@ -26,6 +26,21 @@
       max-width: 250px;
       margin-bottom: 2rem;
     }
+    .status-indicator {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      margin-right: 8px;
+      border-radius: 50%;
+      background-color: #D93636;
+      animation: pulse 1.5s infinite;
+      vertical-align: middle;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.3); opacity: 0.6; }
+      100% { transform: scale(1); opacity: 1; }
+    }
     h1 {
       font-size: 1.8rem;
       margin-bottom: 1rem;
@@ -45,6 +60,33 @@
       border-radius: 8px;
       margin-top: 1.5rem;
     }
+    .status-box {
+      background-color: #245C5B;
+      color: #ffffff;
+      padding: 1.5rem 1rem;
+      border-radius: 12px;
+      margin: 1rem auto 0;
+      max-width: 500px;
+      font-size: 0.95rem;
+    }
+    .status-box p {
+      margin-bottom: 0.2rem;
+    }
+    .status-button {
+      background-color: #63A6A5;
+      color: white;
+      padding: 0.5rem 1.2rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 0.3rem;
+    }
+    .status-button:hover {
+      background-color: #4e9190;
+    }
     a {
       color: #000000;
       text-decoration: underline;
@@ -52,10 +94,11 @@
   </style>
 </head>
 <body>
+
   <div class="container">
     <img class="logo" src="logo-svart.png" alt="Webblix logotyp" />
 
-    <h1>Vi upplever just nu en driftstörning</h1>
+    <h1><span class="status-indicator"></span>Vi upplever just nu en driftstörning</h1>
     <p>
       Vår serverleverantör har för närvarande ett större tekniskt problem som påverkar <strong>alla kundwebbplatser</strong>, inklusive vår egen.
     </p>
@@ -76,5 +119,7 @@
       042 – 424 04 00
     </p>
   </div>
+
 </body>
 </html>
+
